@@ -19,43 +19,48 @@ body {
   width: 100%;
   position: fixed;
   bottom: 0;
-  background: url(../images/color-bg.jpg) center top repeat-x;
+  background: url(./../images/color-bg.jpg) center top repeat-x;
 }
 #home-page {
-  
-}
-#home-page .logo-holder {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-#home-page .login-btn {
-  text-transform: uppercase;
-  font-size: 11px;
-  display: block;
-  width: 250px;
-  margin: 15px auto;
-  background-color: #5d5d5d;
-  color: #fff;
-  border: 0;
-  padding-top: 15px;
-  border-radius: 100px;
-  padding-bottom: 15px;
-  background-repeat: no-repeat;
-  background-position: 20px center;
-  background-size: 24px auto;
-}
-#home-page .login-btn.login-fb {
-  background-image: url(../images/icon-facebook.png);
-  background-color: #3b5998;
-}
-#home-page .login-btn.login-fb:hover {
-  background-color: #223865;
-}
-#home-page .login-btn.login-tw {
-  background-image: url(../images/icon-twitter.png);
-  background-color: #55acee;
-}
-#home-page .login-btn.login-tw:hover {
-  background-color: #4591cb;
+
+  .logo-holder {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .login-btn {
+    text-transform: uppercase;
+    font-size: 11px;
+    display: block;
+    width: 250px;
+    margin: 15px auto;
+    background-color: #5d5d5d;
+    color: #fff;
+    border: 0;
+    padding-top: 15px;
+    border-radius: 100px;
+    padding-bottom: 15px;
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 24px auto;
+  }
+
+  .login-btn.login-fb {
+    background-image: url(./../images/icon-facebook.png);
+    background-color: #3b5998;
+  }
+
+  .login-btn.login-fb:hover {
+    background-color: #223865;
+  }
+
+  .login-btn.login-tw {
+    background-image: url(./../images/icon-twitter.png);
+    background-color: #55acee;
+  }
+
+  .login-btn.login-tw:hover {
+    background-color: #4591cb;
+  }
 }
