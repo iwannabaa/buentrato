@@ -12,8 +12,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   height: 100%;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "franklin-gothic-urw", Helvetica, Arial, sans-serif;
+  background-image: url(./../images/light-toast.png);
 }
+
 #decorator {
   height: 20px;
   width: 100%;
@@ -21,46 +23,118 @@ body {
   bottom: 0;
   background: url(./../images/color-bg.jpg) center top repeat-x;
 }
-#home-page {
 
-  .logo-holder {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
+.navbar-default {
+  background-color: #27A8E0;
+
+  .navbar-header {
+    background-color: #27A8E0;
   }
 
-  .login-btn {
+  .navbar-brand {
     text-transform: uppercase;
-    font-size: 11px;
-    display: block;
-    width: 250px;
-    margin: 15px auto;
-    background-color: #5d5d5d;
     color: #fff;
-    border: 0;
-    padding-top: 15px;
-    border-radius: 100px;
-    padding-bottom: 15px;
-    background-repeat: no-repeat;
-    background-position: 20px center;
-    background-size: 24px auto;
+
+    &:hover {
+      color: #FFCC00;
+    }
+  }
+}
+
+.logo-container {
+  margin-bottom: 40px;
+}
+
+.option-btn {
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  width: 250px;
+  margin: 15px auto;
+  background-color: #5d5d5d;
+  color: #fff;
+  border: 0;
+  padding-top: 15px;
+  border-radius: 100px;
+  padding-bottom: 15px;
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  background-size: 24px auto;
+
+  &:hover, &:focus {
+    text-decoration: none;
+    color: #fff;
   }
 
-  .login-btn.login-fb {
+  &:focus, &:active {
+    outline: none;
+  }
+
+  &.login-fb {
     background-image: url(./../images/icon-facebook.png);
     background-color: #3b5998;
+
+    &:hover {
+      background-color: #223865;
+    }
   }
 
-  .login-btn.login-fb:hover {
-    background-color: #223865;
-  }
-
-  .login-btn.login-tw {
+  &.login-tw {
     background-image: url(./../images/icon-twitter.png);
     background-color: #55acee;
+
+    &:hover {
+      background-color: #4591cb;
+    }
   }
 
-  .login-btn.login-tw:hover {
-    background-color: #4591cb;
+  &.menu-btn {
+    background-color: #1E3464;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    width: 100%;
+
+    &:hover {
+      background-color: darken(#1E3464, 10%);
+    }
+  }
+}
+
+.profile-card {
+  background-color: #fff;
+  box-shadow: 0 3px 1px rgba(185, 185, 185, 0.4);
+  padding: 20px;
+  margin-left: 0;
+  margin-right: 0;  
+
+  .user-avatar {
+    border-radius: 50%;
+    margin-left: -15px;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+    
+  .user-info {
+    margin-bottom: 20px;
+
+    .user-name {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #FFCC00;
+    }
+    .user-location {
+      font-size: 13px;
+      font-weight: normal;
+      margin-top: 0;
+    }
+  }
+
+  .link-to-profile {
+    text-align: right;
+    margin-bottom: 0;
   }
 }
