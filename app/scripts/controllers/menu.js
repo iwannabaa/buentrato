@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name buentratoApp.controller:AboutCtrl
+ * @name buentratoApp.controller:MenuCtrl
  * @description
- * # AboutCtrl
- * Controller of the buentratoApp
+ * # MenuCtrl
+ * Controller of the menu page
  */
 angular.module('buentratoApp')
   .controller('MenuCtrl', function ($scope) {

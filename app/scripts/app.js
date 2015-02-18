@@ -24,6 +24,17 @@ angular
       .when('/menu', {
         templateUrl: 'views/menu.html',
         controller: 'MenuCtrl'
+      }).when('/passport', {
+        templateUrl: 'views/passport.html',
+        controller: 'PassportCtrl'
+      })
+      .when('/trivia', {
+        templateUrl: 'views/trivia.html',
+        controller: 'TriviaCtrl'
+      })
+      .when('/speak-up', {
+        templateUrl: 'views/speak-up.html',
+        controller: 'SpeakUpCtrl'
       })
       .otherwise({
         redirectTo: '/'
