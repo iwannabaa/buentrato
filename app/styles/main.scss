@@ -119,24 +119,65 @@ body {
       border-radius: 50%;
     }
   }
-    
+  
+  .user-info-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .user-info {
-    margin-bottom: 20px;
 
     .user-name {
       margin-top: 0;
       margin-bottom: 0;
       color: #FFCC00;
+      text-shadow: 0 2px 0 darken(#FFCC00, 15%);
+    }
+    .user-username {
+      margin-top: 0;
+      color: #1E3464;
     }
     .user-location {
       font-size: 13px;
       font-weight: normal;
       margin-top: 0;
+      margin-bottom: 0;
+      text-decoration: dotted 1px #ededed;
+
+      span {
+        border-bottom: 1px dotted #c5c5c5;
+      }
     }
   }
+}
+/*---------------------------------------------*/
+/*  
+/*---------------------------------------------*/
 
-  .link-to-profile {
-    text-align: right;
-    margin-bottom: 0;
+.page-title {
+  text-transform: uppercase;
+}
+.phone-directory {
+  width: 100%;
+
+  .country-item {
+    margin-bottom: 10px;
+
+    td {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .country-flag {
+      width: 10%;
+    }
+    .country-name {
+      
+    }
+    .country-prefix {
+      width: 15%;
+    }
+    .phone-number {
+      width: 20%;
+    }
   }
 }
