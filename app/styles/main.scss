@@ -104,12 +104,15 @@ body {
   }
 }
 
-.profile-card {
+.content-card {
   background-color: #fff;
   box-shadow: 0 3px 1px rgba(185, 185, 185, 0.4);
   padding: 20px;
   margin-left: 0;
   margin-right: 0;  
+}
+
+.profile-card {
 
   .user-avatar {
     border-radius: 50%;
@@ -158,47 +161,69 @@ body {
   text-transform: uppercase;
 }
 .country-card {
+  margin-bottom: 10px;
+  margin-top: 20px;
 
   .country-meta-info {
     padding-left: 0;
 
     .country-name {
       margin-bottom: 0;
+      color: #27A8E0;
     }
   }
-  .phone-number {
-    font-size: 18px;
-    margin-bottom: 0;
+  .country-meta-org {
+    padding: 0;
+    
+    .org-name {
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    .phone-number {
+      font-size: 17px;
+      margin-bottom: 0;
+      font-weight: 400;
+    }
   }
 }
 .phone-directory {
   width: 100%;
-  border-top: 2px solid #a8a8a8;
+  border-top: 1px dotted #a8a8a8;
   margin-top: 40px;
 
   .country-item {
     border-bottom: 1px dotted #a8a8a8;
 
+    .country-info {
+      width: 100%;
+    }
+
     td {
-      padding-top: 10px;
-      padding-bottom: 10px;
       font-size: 16px;
     }
 
     .country-flag {
+      padding-top: 10px;
+
       img {
         max-width: 20px;
       }
     }
+
     .country-name {
-      
+      padding-top: 10px;
     }
-    .country-prefix {
-      width: 15%;
-    }
+
     .phone-number {
       width: 30%;
       text-align: right;
+      padding-top: 10px;
+      font-size: 15px;
+    }
+
+    .organization-name {
+      font-size: 13px;
+      padding-bottom: 10px;
     }
   }
 }
