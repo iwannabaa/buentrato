@@ -9,4 +9,5 @@
  */
 angular.module('buentratoApp')
   .controller('MainCtrl', function ($scope) {
+    $scope.variable = 'value';
   });
