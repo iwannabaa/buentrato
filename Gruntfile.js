@@ -280,6 +280,9 @@ module.exports = function (grunt) {
           ],
           html: [
             [/(images\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the CSS to reference our revved images']
+          ],
+          js: [
+            [/(images\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the CSS to reference our revved images']
           ]
         }
       }
