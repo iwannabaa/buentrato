@@ -3,6 +3,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+$primary-color-light: #27A8E0;
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -14,7 +16,6 @@ body {
   height: 100%;
   font-family: "franklin-gothic-urw", Helvetica, Arial, sans-serif;
   background-image: url(./../images/light-toast.png);
-  padding-bottom: 20px;
 }
 
 #decorator {
@@ -30,11 +31,11 @@ body {
 /*---------------------------------------------*/
 
 .navbar-default {
-  background-color: #27A8E0;
-  border-bottom: 3px solid darken(#27A8E0, 10%);
+  background-color: $primary-color-light;
+  border-bottom: 3px solid darken($primary-color-light, 10%);
 
   .navbar-header {
-    background-color: #27A8E0;
+    background-color: $primary-color-light;
   }
 
   .navbar-brand {
@@ -107,13 +108,15 @@ body {
   }
 
   &.menu-btn {
-    background-color: #1E3464;
+    border-bottom: 3px solid darken($primary-color-light, 10%);
+    background-color: $primary-color-light;
     margin-bottom: 25px;
     margin-top: 25px;
     width: 100%;
 
     &:hover {
-      background-color: darken(#1E3464, 10%);
+      background-color: darken($primary-color-light, 10%);
+      border-bottom: 3px solid darken($primary-color-light, 20%);
     }
   }
 }
@@ -177,11 +180,12 @@ body {
     }
   }
 }
+
 /*---------------------------------------------*/
 /*  SPEAK UP PAGE
 /*---------------------------------------------*/
 
-#speak-page {
+.page-wrapper {
   padding-top: 50px;
 }
 .navbar-default .navbar-brand {
@@ -252,6 +256,38 @@ body {
     .organization-name {
       font-size: 13px;
       padding-bottom: 10px;
+      color: #5c5c5c;
     }
   }
+}
+
+/*---------------------------------------------*/
+/*  TRIVIA HOME
+/*---------------------------------------------*/
+
+.trivia-level-card {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+
+  .trivia-level-title {
+    text-transform: uppercase;
+  }
+}
+
+.trivia-card-level-1 {
+  background-image: url(./../images/kid-01.png);
+}
+
+.trivia-card-level-2 {
+  background-image: url(./../images/kid-02.png);
+}
+
+.trivia-card-level-3 {
+  background-image: url(./../images/kid-03.png);
+}
+
+.trivia-card-level-4 {
+  background-image: url(./../images/kid-04.png);
 }

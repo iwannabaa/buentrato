@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('buentratoApp')
-  .controller('triviaCtrl', function ($scope) {
+  .controller('TriviaCtrl', function ($scope) {
     $scope.variable = 'value';
   });
