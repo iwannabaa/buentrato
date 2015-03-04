@@ -140,10 +140,14 @@ body {
 .profile-card {
   margin-bottom: 15px;
   margin-top: 15px;
+  
+  .user-avatar-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   .user-avatar {
     border-radius: 50%;
-    margin-left: -15px;
 
     img {
       border-radius: 50%;
@@ -151,7 +155,6 @@ body {
   }
   
   .user-info-wrapper {
-    padding-left: 0;
     padding-right: 0;
   }
 
@@ -270,9 +273,18 @@ body {
   margin-top: 15px;
   background-repeat: no-repeat;
   background-position: 5px 5px;
+  min-height: 120px;
 
   .trivia-level-title {
-    text-transform: uppercase;
+    padding-right: 0;
+
+    h4 {
+      text-align: right;
+      color: #1b89b9;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
   }
 }
 
