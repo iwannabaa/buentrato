@@ -3,7 +3,9 @@
 angular.module('buentratoApp')
     .factory('Data', function() {
 
-        var myContacts = [
+        var User;
+
+        var Contacts = [
             {
                 countryCode : 'sv',
                 countryName : 'El Salvador',
@@ -140,11 +142,18 @@ angular.module('buentratoApp')
         ];
 
         function getContacts() {
-
-            return myContacts;
-        }        
+            return Contacts;
+        }
+        function getUser() {
+            return User;
+        }    
+        function setUser(user) {
+            User = user;
+        }    
 
         return {
-            getContacts: getContacts
+            getContacts : getContacts,
+            getUser     : getUser,
+            setUser     : setUser
         };
     });

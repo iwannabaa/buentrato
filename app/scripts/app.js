@@ -13,9 +13,15 @@ angular
     'ngAnimate',
     'ngResource',
     'ngRoute',
-    'ngTouch'
+    'ngTouch',
+    'ngFacebook'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $facebookProvider) {
+
+    $facebookProvider.setAppId('1552541561701563');
+    $facebookProvider.setPermissions('user_location');
+    $facebookProvider.setVersion('v2.2');
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -32,6 +38,10 @@ angular
         templateUrl: 'views/trivia.html',
         controller: 'TriviaCtrl'
       })
+      .when('/trivia/:id/:slug', {
+        templateUrl: 'views/trivia-item.html',
+        controller: 'TriviaItemCtrl'
+      })
       .when('/speak-up', {
         templateUrl: 'views/speak-up.html',
         controller: 'SpeakUpCtrl'
@@ -39,4 +49,27 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .run( function($rootScope, $location) {
+    // Load the facebook SDK asynchronously
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = '//connect.facebook.net/en_US/sdk.js';
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
+    // register listener to watch route changes
+    $rootScope.$on( '$routeChangeStart', function(event, next) {
+      if ( ! $rootScope.loggedUser ) {
+        // no logged user, we should be going to #main
+        if ( next.templateUrl === 'views/main.html' ) {
+          // already going to #login, no redirect needed
+        } else {
+          // not going to #login, we should redirect now
+          $location.path( '/' );
+        }
+      }         
+    });
   });

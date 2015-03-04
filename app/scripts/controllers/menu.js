@@ -8,10 +8,7 @@
  * Controller of the menu page
  */
 angular.module('buentratoApp')
-  .controller('MenuCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MenuCtrl', function ($scope, Data) {
+    $scope.Data = Data;
+    $scope.user = Data.getUser();
   });

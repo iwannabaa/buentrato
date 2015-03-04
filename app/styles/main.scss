@@ -79,6 +79,7 @@ body {
   background-repeat: no-repeat;
   background-position: 20px center;
   background-size: 24px auto;
+  cursor: pointer;
 
   &:hover, &:focus {
     text-decoration: none;
@@ -110,8 +111,8 @@ body {
   &.menu-btn {
     border-bottom: 3px solid darken($primary-color-light, 10%);
     background-color: $primary-color-light;
-    margin-bottom: 25px;
-    margin-top: 25px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     width: 100%;
 
     &:hover {
@@ -151,6 +152,7 @@ body {
 
     img {
       border-radius: 50%;
+      max-width: 100%;
     }
   }
   
@@ -161,7 +163,6 @@ body {
   .user-info {
 
     .user-name {
-      margin-top: 0;
       margin-bottom: 0;
       color: #FFCC00;
       text-shadow: 0 2px 0 darken(#FFCC00, 15%);
@@ -274,6 +275,7 @@ body {
   background-repeat: no-repeat;
   background-position: 5px 5px;
   min-height: 120px;
+  position: relative;
 
   .trivia-level-title {
     padding-right: 0;
@@ -302,4 +304,19 @@ body {
 
 .trivia-card-level-4 {
   background-image: url(./../images/kid-04.png);
+}
+
+/*---------------------------------------------*/
+/*  TRIVIA PAGE
+/*---------------------------------------------*/
+
+.go-to-trivia-page {
+  background: #fc0;
+  margin: 0;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 0 20px;
+  color: #fff;
+  border-radius: 50px;
 }
