@@ -17,13 +17,12 @@ angular.module('buentratoApp')
 	};
 
 	$scope.getUser = function() {
-		$facebook.api('/me?fields=id,name,location,picture.redirect(false).width(100).height(100).type(square)').then( 
+		$facebook.api('/me?fields=id,name,picture.redirect(false).width(100).height(100).type(square)').then( 
 			function(response) {
 				var user = {
 					id 		 : response.id,
 					name 	 : response.name,
-					picture  : response.picture.data.url,
-					location : response.location.name
+					picture  : response.picture.data.url
 				};
 				Data.setUser(user);
 				$rootScope.loggedUser = true;
