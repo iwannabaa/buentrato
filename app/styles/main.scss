@@ -325,7 +325,9 @@ body {
   margin-bottom: 20px;
 
   .question-content {
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
     color: #737373;
   }
 }
@@ -334,10 +336,26 @@ body {
   background: #a5a5a5;
   padding: 10px 10px;
   text-align: center;
-  font-size: 16px;
+  font-size: 13px;
   color: #fff;
   border-radius: 5px;
   line-height: 16px;
   border-bottom: 2px solid #7c7c7c;
   cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background: #7c7c7c;
+    border-bottom-color: darken(#7c7c7c, 10%);
+  }
+
+  &.answer-selected {
+    background-color: $primary-color-light;
+    border-bottom-color: darken($primary-color-light, 10%); 
+
+    &:hover {
+      background-color: darken($primary-color-light, 10%);
+      border-bottom-color: darken($primary-color-light, 20%);
+    }
+  }
 }
