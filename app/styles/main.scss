@@ -319,4 +319,25 @@ body {
   padding: 0 20px;
   color: #fff;
   border-radius: 50px;
+  border-bottom: 2px solid darken(#fc0, 10%);
+}
+.question-container {
+  margin-bottom: 20px;
+
+  .question-content {
+    font-size: 16px;
+    color: #737373;
+  }
+}
+
+.answer-content {
+  background: #a5a5a5;
+  padding: 10px 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 5px;
+  line-height: 16px;
+  border-bottom: 2px solid #7c7c7c;
+  cursor: pointer;
 }

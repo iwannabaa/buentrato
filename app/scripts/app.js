@@ -62,14 +62,13 @@ angular
 
     // register listener to watch route changes
     $rootScope.$on( '$routeChangeStart', function(event, next) {
-      if ( ! $rootScope.loggedUser ) {
-        // no logged user, we should be going to #main
-        if ( next.templateUrl === 'views/main.html' ) {
-          // already going to #login, no redirect needed
-        } else {
-          // not going to #login, we should redirect now
-          $location.path( '/' );
-        }
+      if ( ! $rootScope.loggedUser && next.templateUrl !== 'views/main.html' ) {
+        // no logged user, not going to #login, we should redirect to #main
+        $location.path( '/' );
+      }
+      if ( $rootScope.loggedUser && next.templateUrl === 'views/main.html' ) {
+        // no logged user, not going to #login, we should redirect to #main
+        $location.path( '/menu' );
       }         
     });
   });

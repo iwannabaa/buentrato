@@ -7,11 +7,11 @@ angular.module('buentratoApp')
 
         var Contacts = [
             {
-                countryCode : 'sv',
-                countryName : 'El Salvador',
-                organizationName : 'Protección al menor',
-                phoneCode : '503',
-                organizationNumber : '2255 1089'
+                countryCode : 'uy',
+                countryName : 'Uruguay',
+                organizationName : 'Línea Azul',
+                phoneCode : '598',
+                organizationNumber : '0800 5050'
             },
             {
                 countryCode : 'ar',
@@ -61,6 +61,13 @@ angular.module('buentratoApp')
                 organizationName : 'DINAPEN',
                 phoneCode : '593',
                 organizationNumber : '22950214'
+            },
+            {
+                countryCode : 'sv',
+                countryName : 'El Salvador',
+                organizationName : 'Protección al menor',
+                phoneCode : '503',
+                organizationNumber : '2255 1089'
             },
             {
                 countryCode : 'us',
@@ -131,13 +138,52 @@ angular.module('buentratoApp')
                 organizationName : 'Linea 700',
                 phoneCode : '1809',
                 organizationNumber : '700'
-            },
-            {
-                countryCode : 'uy',
-                countryName : 'Uruguay',
-                organizationName : 'Línea Azul',
-                phoneCode : '598',
-                organizationNumber : '0800 5050'
+            }
+        ];
+
+        var Trivia = [
+             {
+                level: 1,
+                title: 'Derechos del niño/a y adolescente',
+                slug: 'derechos-del-nino-y-adolescente',
+                questions : [
+                    {
+                        index: 1,
+                        question: 'Marca cuál de las siguientes opciones no es un derecho del niño:',
+                        answers: [
+                            {text: 'A la educación de calidad'},
+                            {text: 'A la salud '},
+                            {text: 'Al descanso, esparcimiento, juego y cultura'},
+                            {text: 'A la participación'},
+                            {text: 'A participar en una guerra'}
+                        ],
+                        correctAnswer: 1
+                    },
+                    {
+                        index: 2,
+                        question: '¿Cuantos derechos hay en la convención?',
+                        answers: [
+                            {text: '20'},
+                            {text: '30'},
+                            {text: '40'},
+                            {text: '50'},
+                            {text: '60'}
+                        ],
+                        correctAnswer: 1
+                    },
+                    {
+                        index: 3,
+                        question: '¿En que año fue creada la convención?',
+                        answers: [
+                            {text: '1983'},
+                            {text: '1989'},
+                            {text: '1959'},
+                            {text: '1995'},
+                            {text: '2001'}
+                        ],
+                        correctAnswer: 1
+                    }
+                ]
             }
         ];
 
@@ -149,11 +195,16 @@ angular.module('buentratoApp')
         }    
         function setUser(user) {
             User = user;
+        }
+        function getTrivia (index) {
+            var level = index - 1;
+            return Trivia[level];
         }    
 
         return {
             getContacts : getContacts,
             getUser     : getUser,
-            setUser     : setUser
+            setUser     : setUser,
+            getTrivia   : getTrivia
         };
     });

@@ -17,19 +17,18 @@ angular.module('buentratoApp')
 	};
 
 	$scope.getUser = function() {
-		$facebook.api('/me?fields=id,name,picture.redirect(false).width(100).height(100).type(square)').then( 
-			function(response) {
-				var user = {
+		
+		var endpoint = '/me?fields=id,name,picture.redirect(false).width(100).height(100).type(square)';
+
+		$facebook.api(endpoint).then( function(response) {
+			var user = {
 					id 		 : response.id,
 					name 	 : response.name,
 					picture  : response.picture.data.url
 				};
-				Data.setUser(user);
-				$rootScope.loggedUser = true;
-				$location.path( '/menu' );
-			},
-			function(error) {
-				console.log(error);
-			});
+			Data.setUser(user);
+			$rootScope.loggedUser = true;
+			$location.path( '/menu' );
+		});
 	};
   });

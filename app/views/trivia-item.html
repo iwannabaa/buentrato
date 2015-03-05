@@ -1,4 +1,4 @@
-<div id="passport-page" class="page-wrapper">
+<div id="trivia-page" class="page-wrapper">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -7,4 +7,12 @@
       </div>
     </div>
   </nav>
+  <div class="container">
+  	<div class="question-container" ng-repeat="item in trivia.questions">
+		<h2 class="question-content">{{item.index}}. {{item.question}}</h2>
+		<div class="answers-container">
+			<p class="answer-content" ng-repeat="answerItem in item.answers">{{answerItem.text}}</p>
+		</div>
+	</div>
+  </div>
 </div>
