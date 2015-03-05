@@ -142,7 +142,7 @@ angular.module('buentratoApp')
         ];
 
         var Trivia = [
-             {
+            {
                 level: 1,
                 title: 'Derechos del niño/a y adolescente',
                 slug: 'derechos-del-nino-y-adolescente',
@@ -180,6 +180,61 @@ angular.module('buentratoApp')
                             {text: '1959'},
                             {text: '1995'},
                             {text: '2001'}
+                        ],
+                        correctAnswer: 1
+                    }
+                ]
+            },
+            {
+                level: 2,
+                title: 'De la violencia al maltrato',
+                slug: 'de-la-violencia-al-maltrato',
+                questions : [
+                    {
+                        index: 1,
+                        question: 'El buentrato es...',
+                        answers: [
+                            {text: 'Obedecer siempre'},
+                            {text: 'Pensar solo en mi mismo'},
+                            {text: 'No compartir'},
+                            {text: 'Escuchar con atención'},
+                            {text: 'Aceptar todo lo que el otro quiera'}
+                        ],
+                        correctAnswer: 1
+                    },
+                    {
+                        index: 2,
+                        question: 'Violencia hacia los niños y niñas es',
+                        answers: [
+                            {text: 'Denunciar situaciones de maltrato.'},
+                            {text: 'No escucharlos con atención.'},
+                            {text: 'Creerles cuando hablan de asuntos que los afectan.'},
+                            {text: 'Protegerlos cuando su derecho al buentrato no es respetado.'},
+                            {text: 'Incluir sin discriminar.'}
+                        ],
+                        correctAnswer: 1
+                    },
+                    {
+                        index: 3,
+                        question: 'Resiliencia es...',
+                        answers: [
+                            {text: 'Capacidad de no enojarse'},
+                            {text: 'Capacidad de resistir y reconstruir'},
+                            {text: 'Capacidad de dormir bien'},
+                            {text: 'Capacidad de tratar bien'},
+                            {text: 'Capacidad de hacer lo correcto'}
+                        ],
+                        correctAnswer: 1
+                    },
+                    {
+                        index: 4,
+                        question: '¿Cual es el tipo de violencia más frecuente hacia los niños y niñas?',
+                        answers: [
+                            {text: 'Castigo físico'},
+                            {text: 'Psicológica'},
+                            {text: 'Abuso sexual.'},
+                            {text: 'Patrimonial'},
+                            {text: 'Explotación sexual'}
                         ],
                         correctAnswer: 1
                     }
