@@ -29,6 +29,10 @@ body {
   background: url(./../images/color-bg.jpg) center top repeat-x;
 }
 
+.page-wrapper {
+  padding-top: 50px;
+}
+
 /*---------------------------------------------*/
 /*  TOP BAR
 /*---------------------------------------------*/
@@ -125,13 +129,10 @@ body {
   }
 }
 
+
 /*---------------------------------------------*/
 /*  MENU PAGE
 /*---------------------------------------------*/
-
-#menu-page {
-  padding-top: 50px;
-}
 
 .content-card {
   background-color: #fff;
@@ -192,9 +193,6 @@ body {
 /*  SPEAK UP PAGE
 /*---------------------------------------------*/
 
-.page-wrapper {
-  padding-top: 50px;
-}
 .navbar-default .navbar-brand {
   position: absolute;
 }
