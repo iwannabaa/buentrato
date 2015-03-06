@@ -182,6 +182,18 @@ angular.module('buentratoApp')
                             {text: '2001'}
                         ],
                         correctAnswer: 1
+                    },
+                    {
+                        index: 4,
+                        question: '¿Que países no aprobaron la convención de los derechos del niño?',
+                        answers: [
+                            {text: 'Cuba'},
+                            {text: 'EEUU'},
+                            {text: 'Afganistán'},
+                            {text: 'Japón'},
+                            {text: 'Alemania'}
+                        ],
+                        correctAnswer: 1
                     }
                 ]
             },
@@ -239,6 +251,147 @@ angular.module('buentratoApp')
                         correctAnswer: 1
                     }
                 ]
+            },
+            {
+                level: 3,
+                title: 'Activismo y participación',
+                slug: 'activismo-y-participación',
+                questions : [
+                    {
+                        index: 1,
+                        question: 'La participación adolescente y juvenil es...',
+                        answers: [
+                            {text: 'Un privilegio para algunos'},
+                            {text: 'Una perdida de tiempo'},
+                            {text: 'Un derecho para todos y todas'},
+                            {text: 'Algo que no afecta la realidad'},
+                            {text: 'Siempre dirigida por adultos'}
+                        ],
+                        correctAnswer: 1
+                    },
+                    {
+                        index: 2,
+                        question: '¿Que joven recibio un reconocimiento por su lucha por el derecho a la educación de su pais?',
+                        answers: [
+                            {text: 'Violeta'},
+                            {text: 'Malala Yousafzai'},
+                            {text: 'Justin Bieber'},
+                            {text: 'Neimar Junior'},
+                            {text: 'Emma Watson'}
+                        ],
+                        correctAnswer: 1
+                    },
+                    {
+                        index: 3,
+                        question: '¿En que año comenzó la campaña "Un trato por el buentrato"?',
+                        answers: [
+                            {text: '2000'},
+                            {text: '2003'},
+                            {text: '2006'},
+                            {text: '2009'},
+                            {text: '2011'}
+                        ],
+                        correctAnswer: 1
+                    },
+                    {
+                        index: 4,
+                        question: '¿Cual es la línea telefónica para realizar denuncias de maltrato en Brasil?',
+                        answers: [
+                            {text: '911'},
+                            {text: '150'},
+                            {text: '100'},
+                            {text: '111'},
+                            {text: '123'}
+                        ],
+                        correctAnswer: 1
+                    }
+                ]
+            },
+            {
+                level: 4,
+                title: '¿Quien lo dijo?',
+                slug: 'quien-lo-dijo',
+                questions : [
+                    {
+                        index: 1,
+                        question: '"No hay camino para la paz, la paz es el camino"',
+                        answers: [
+                            {text: 'Ricky Martin'},
+                            {text: 'Luis Suarez'},
+                            {text: 'Mahatma Gandhi'},
+                            {text: 'Juan Pablo II'},
+                            {text: 'Eduardo Galeano'}
+                        ],
+                        correctAnswer: 1
+                    },
+                    {
+                        index: 2,
+                        question: '"No me preocupa tanto la maldad de los malos, sino la pasividad de los supuestamente buenos"',
+                        answers: [
+                            {text: 'Martin Luter King'},
+                            {text: 'Mahtma Ghandi'},
+                            {text: 'Bono'},
+                            {text: 'Madre Teresa'},
+                            {text: 'Barak Obama'}
+                        ],
+                        correctAnswer: 1
+                    },
+                    {
+                        index: 3,
+                        question: '"Para promover la paz mundial, vete a casa y ama a tu familia"',
+                        answers: [
+                            {text: 'Rigoberta Menchu'},
+                            {text: 'Mercedes Sosa'},
+                            {text: 'León Gieco'},
+                            {text: 'Madre Teresa'},
+                            {text: 'Adolfo Perez Esquivel'}
+                        ],
+                        correctAnswer: 1
+                    }
+                ]
+            },
+            {
+                level: 5,
+                title: 'Mix',
+                slug: 'mix',
+                questions : [
+                    {
+                        index: 1,
+                        question: '¿A partir de que edad se tiene derecho a la participación?',
+                        answers: [
+                            {text: 'Desde el nacimiento'},
+                            {text: '5 años'},
+                            {text: '13 años'},
+                            {text: '15 años'},
+                            {text: '18 años'}
+                        ],
+                        correctAnswer: 1
+                    },
+                    {
+                        index: 2,
+                        question: 'Cuando queres ayudar una persona ciega debes evitar...',
+                        answers: [
+                            {text: 'Preguntarle si precisa ayuda'},
+                            {text: 'Acercarle el brazo'},
+                            {text: 'Tomarlo del brazo'},
+                            {text: 'Presentarte '},
+                            {text: 'Actuar naturalidad y respeto'}
+                        ],
+                        correctAnswer: 1
+                    },
+                    {
+                        index: 3,
+                        question: 'La equidad de género es...',
+                        answers: [
+                            {text: 'Que los hombres y las mujeres sean iguales'},
+                            {text: 'Solo beneficia a las mujeres'},
+                            {text: 'La dominación de las mujeres sobre los hombres'},
+                            {text: 'Busca contra restar las desigualdades entre varones y mujeres'},
+                            {text: 'No le interesa a los hombres'}
+                        ],
+                        correctAnswer: 1
+                    }
+                ]
             }
         ];
 
@@ -252,6 +405,9 @@ angular.module('buentratoApp')
             User = user;
         }
         function getTrivia (index) {
+            if ( !index ) {
+                return Trivia;
+            }
             var level = index - 1;
             return Trivia[level];
         }    

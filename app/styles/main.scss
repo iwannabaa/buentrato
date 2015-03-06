@@ -306,6 +306,10 @@ body {
   background-image: url(./../images/kid-04.png);
 }
 
+.trivia-card-level-5 {
+  background-image: url(./../images/kid-01.png);
+}
+
 /*---------------------------------------------*/
 /*  TRIVIA PAGE
 /*---------------------------------------------*/
@@ -351,11 +355,6 @@ body {
 
   &.answer-selected {
     background-color: $primary-color-light;
-    border-bottom-color: darken($primary-color-light, 10%); 
-
-    &:hover {
-      background-color: darken($primary-color-light, 10%);
-      border-bottom-color: darken($primary-color-light, 20%);
-    }
+    border-bottom-color: darken($primary-color-light, 10%);
   }
 }

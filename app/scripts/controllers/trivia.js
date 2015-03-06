@@ -2,6 +2,6 @@
 
 angular.module('buentratoApp')
   .controller('TriviaCtrl', function ($scope, Data) {
-    $scope.variable = 'value';
     $scope.triviaList = Data.getTrivia();
+    console.log($scope.triviaList);
   });
