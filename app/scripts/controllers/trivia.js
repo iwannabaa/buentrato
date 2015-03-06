@@ -7,6 +7,7 @@ angular.module('buentratoApp')
     $scope.$parent.showNav = true;
     $scope.$parent.hasBackBtn = true;
     $scope.$parent.pageTitle = 'Trivia';
+    $scope.$parent.backPage = 'menu';
     
     $scope.triviaList = Data.getTrivia();
   });

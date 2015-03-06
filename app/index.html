@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Uruguay, país del buentrato</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -22,15 +22,15 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <nav class="navbar navbar-default navbar-fixed-top" ng-cloak ng-init="showNav=false;hasBackBtn=false" ng-show="showNav">
+    <nav class="navbar navbar-default navbar-fixed-top" ng-cloak ng-show="showNav">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a href="#/menu" class="navbar-brand" ng-show="hasBackBtn">&larr;</a>
+          <a href="#/{{backPage}}" ng-click="transition('back')" class="navbar-brand" ng-show="hasBackBtn">&larr;</a>
           <p class="navbar-text navbar-title text-center">{{pageTitle}}</p>
         </div>
       </div>
     </nav>    
-    <div ng-view class="main-wrapper view-animate {{pageClass}}"></div>
+    <div ng-view class="main-wrapper view-animate {{pageClass}}" ng-class=" isGoingBack ? 'go-back' : '' " autoscroll="true"></div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->

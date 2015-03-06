@@ -2,44 +2,61 @@
   Animations
 ------------------------------------------------------- */
 
-.view-animate.ng-enter {
+.view-animate {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+.view-animate.ng-enter {
+  position: fixed;
+  width: 100%;
+  height: 100%;
   z-index: 10;
-  animation: enter .6s;
+  -webkit-animation: enter .4s;
+  animation: enter .4s;
 }
 .view-animate.ng-leave {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 100;
-  animation: leave 1s;
+  z-index: 1;
+  -webkit-animation: leave .4s;
+  animation: leave .4s;
+}
+.view-animate.ng-enter.go-back {
+  -webkit-animation: back .4s;
+  animation: back .4s;
 }
 .page-main.ng-enter {
   animation: none;
 }
 
 @-webkit-keyframes enter {
-  0% {
-    opacity: 0;
+  from {
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
   }
-  50% {
+  to {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+@-webkit-keyframes leave {
+  from {
     opacity: 1;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
-
-@-webkit-keyframes leave {
-  0% {
-    opacity: 1;
+@-webkit-keyframes back {
+  from {
+    -webkit-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
   }
-  30% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
+  to {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
   }
 }

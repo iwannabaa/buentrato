@@ -50,7 +50,7 @@ angular
         redirectTo: '/'
       });
   })
-  .run( function($rootScope, $location) {
+  .run( function($rootScope/*, $location*/) {
     // Load the facebook SDK asynchronously
     (function(d, s, id){
        var js, fjs = d.getElementsByTagName(s)[0];
@@ -60,8 +60,12 @@ angular
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
 
+    $rootScope.transition = function(direction) {
+      $rootScope.isGoingBack = direction === 'back' ? true : false;
+    };
+
     // register listener to watch route changes
-    $rootScope.$on( '$routeChangeStart', function(event, next) {
+    /*$rootScope.$on( '$routeChangeStart', function(event, next) {
       if ( ! $rootScope.loggedUser && next.templateUrl !== 'views/main.html' ) {
         // no logged user, not going to #login, we should redirect to #main
         $location.path( '/' );
@@ -70,5 +74,5 @@ angular
         // no logged user, not going to #login, we should redirect to #main
         $location.path( '/menu' );
       }         
-    });
+    });*/
   });

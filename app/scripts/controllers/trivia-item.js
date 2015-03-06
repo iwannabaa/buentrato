@@ -7,6 +7,7 @@ angular.module('buentratoApp')
     $scope.$parent.showNav = true;
     $scope.$parent.hasBackBtn = true;
     $scope.$parent.pageTitle = 'Trivia Nivel ' + $routeParams.id;
+    $scope.$parent.backPage = 'trivia';
     
     $scope.trivia = Data.getTrivia($routeParams.id);
     $scope.selectAnswer = function(questionIndex, answerIndex) {

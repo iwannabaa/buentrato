@@ -6,4 +6,7 @@ angular.module('buentratoApp')
     $scope.$parent.showNav = true;
     $scope.$parent.hasBackBtn = true;
     $scope.$parent.pageTitle = 'Crea tu pasaporte';
+    $scope.$parent.backPage = 'menu';
+
+    
   });
