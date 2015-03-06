@@ -22,8 +22,15 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-
-      <div ng-view class="main-wrapper"></div>
+    <nav class="navbar navbar-default navbar-fixed-top" ng-init="showNav=false,hasBackBtn=false" ng-show="showNav">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="#/menu" class="navbar-brand" ng-show="hasBackBtn">&larr;</a>
+          <p class="navbar-text navbar-title text-center">{{pageTitle}}</p>
+        </div>
+      </div>
+    </nav>    
+    <div ng-view class="main-wrapper view-animate {{pageClass}}"></div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->

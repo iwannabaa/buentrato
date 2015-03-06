@@ -1,0 +1,42 @@
+/* -------------------------------------------------------
+  Animations
+------------------------------------------------------- */
+
+.view-animate.ng-enter {
+  animation: enter .6s;
+}
+.view-animate.ng-leave {
+  -webkit-animation: leave 1s;
+  -moz-animation: leave 1s;
+  animation: leave 1s;
+  position: absolute;
+  width: 100%;
+}
+.page-main.ng-enter {
+  animation: none;
+}
+
+@-webkit-keyframes enter {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes leave {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

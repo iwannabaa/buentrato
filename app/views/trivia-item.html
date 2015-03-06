@@ -1,12 +1,4 @@
 <div id="trivia-page" class="page-wrapper">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a href="#/trivia" class="navbar-brand">&larr;</a>
-        <p class="navbar-text navbar-title text-center">Trivia</p>
-      </div>
-    </div>
-  </nav>
   <div class="container">
   	<div class="question-container" ng-repeat="item in trivia.questions">
 		<h2 class="question-content">{{item.index}}. {{item.question}}</h2>
