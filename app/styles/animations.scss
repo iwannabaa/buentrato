@@ -3,7 +3,8 @@
 ------------------------------------------------------- */
 
 .view-animate {
-  position: absolute;
+  position: fixed;
+  overflow: auto;
   width: 100%;
   height: 100%;
 }
@@ -47,7 +48,7 @@
     opacity: 1;
   }
   to {
-    opacity: 1;
+    opacity: 0;
   }
 }
 @-webkit-keyframes back {
