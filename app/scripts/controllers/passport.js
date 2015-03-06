@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('buentratoApp')
-  .controller('passportCtrl', function ($scope) {
+  .controller('PassportCtrl', function ($scope) {
     $scope.pageClass = 'page-passport';
     $scope.$parent.showNav = true;
     $scope.$parent.hasBackBtn = true;
