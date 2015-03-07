@@ -9,7 +9,7 @@
       <div class="col-xs-12 text-center">
         <a ng-click="login()" class="option-btn login-fb" ng-show="connectionChecked">Entrar con facebook</a>
         <img src="images/loader.gif" ng-hide="connectionChecked" alt="Loading..." width="48px">
-        <p class="status-info">Verificando Conexión</p>
+        <p class="status-info" ng-hide="connectionChecked">Verificando Conexión</p>
         <!-- <a href="#/menu" class="option-btn login-tw">Entrar con twitter</a> -->
       </div>
     </div>

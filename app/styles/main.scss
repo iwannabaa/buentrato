@@ -7,6 +7,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "animations";
 
 $primary-color-light: #27A8E0;
+$highlight-color: #FFCC00;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -45,6 +46,10 @@ body {
 
   .navbar-header {
     background-color: $primary-color-light;
+
+    @media  (min-width: 768px) {
+      float: none;
+    }
   }
 
   .navbar-brand {
@@ -63,6 +68,10 @@ body {
     font-size: 18px;
     margin-top: 10px;
     margin-bottom: 10px;
+
+    @media  (min-width: 768px) {
+      float: none;
+    }
   }
 }
 
@@ -147,6 +156,10 @@ body {
 .profile-card {
   margin-bottom: 15px;
   margin-top: 15px;
+
+  @media (min-width: 768px) {
+    margin-top: 60px;
+  }
   
   .user-avatar-wrapper {
     padding-left: 0;
@@ -328,20 +341,41 @@ body {
   border-radius: 50px;
   border-bottom: 2px solid darken(#fc0, 10%);
 }
+.card-title {
+  background-color: darken($highlight-color,10%);
+  margin-top: 15px;
+}
+.trivia-item-title {
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #fff;
+}
 .question-container {
   margin-bottom: 20px;
+
+  .trivia-question-card {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 
   .question-content {
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     color: #737373;
+    margin: 0;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
   }
 }
 
 .answer-content {
   background: #a5a5a5;
-  padding: 10px 10px;
+  padding: 15px 10px;
   text-align: center;
   font-size: 13px;
   color: #fff;
@@ -350,6 +384,10 @@ body {
   border-bottom: 2px solid #7c7c7c;
   cursor: pointer;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+      font-size: 15px;
+    }
 
   &:hover {
     background: #7c7c7c;
