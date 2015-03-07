@@ -2,7 +2,7 @@
 
 angular.module('buentratoApp')
   .controller('SpeakUpCtrl', function ($scope, Data) {
-    
+    // Page setup
     $scope.pageClass = 'page-speak-up';
     $scope.$parent.showNav = true;
     $scope.$parent.hasBackBtn = true;

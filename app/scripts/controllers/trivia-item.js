@@ -2,7 +2,7 @@
 
 angular.module('buentratoApp')
   .controller('TriviaItemCtrl', function ($scope, Data, $routeParams) {
-
+    // Page setup
     $scope.pageClass = 'page-trivia-item';
     $scope.$parent.showNav = true;
     $scope.$parent.hasBackBtn = true;

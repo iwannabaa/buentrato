@@ -9,9 +9,10 @@
  */
 angular.module('buentratoApp')
   .controller('MainCtrl', function ($rootScope, $scope, $location, $facebook, Data) {
-
+  	// Page setup
   	$scope.pageClass = 'page-main';
   	$scope.$parent.showNav = false;
+  	$scope.connectionChecked = false;
 
 		$scope.login = function() {
 			$facebook.login().then(function() {
@@ -34,4 +35,17 @@ angular.module('buentratoApp')
 				$location.path( '/menu' );
 			});
 		};
+
+		$scope.checkConnection = function() {
+			$facebook.getLoginStatus().then(function(response){
+				if ( response.status === 'connected' ) {
+					$scope.getUser();
+				}
+				else {
+					$scope.connectionChecked = true;
+				}
+			});
+		};
+
+		$scope.checkConnection();
   });
