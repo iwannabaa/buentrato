@@ -341,31 +341,26 @@ body {
   border-radius: 50px;
   border-bottom: 2px solid darken(#fc0, 10%);
 }
-.card-title {
-  background-color: darken($highlight-color,10%);
-  margin-top: 15px;
-}
-.trivia-item-title {
-  text-align: center;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin: 0;
-  color: #fff;
-}
 .question-container {
   margin-bottom: 20px;
+  font-family: "proxima-nova";
+  position: relative;
 
   .trivia-question-card {
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
   }
 
   .question-content {
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #737373;
+    color: #4d4d4d;
     margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    line-height: 18px;
 
     @media (min-width: 768px) {
       font-size: 18px;
