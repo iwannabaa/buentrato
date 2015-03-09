@@ -42,6 +42,10 @@ angular
         templateUrl: 'views/trivia-item.html',
         controller: 'TriviaItemCtrl'
       })
+      .when('/trivia/:id/:slug/end-level', {
+        templateUrl: 'views/trivia-end.html',
+        controller: 'TriviaEndCtrl'
+      })
       .when('/speak-up', {
         templateUrl: 'views/speak-up.html',
         controller: 'SpeakUpCtrl'

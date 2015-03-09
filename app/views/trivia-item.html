@@ -9,6 +9,8 @@
 				<div class="answers-container">
 					<p class="answer-content" ng-class="$index === question.selectedAnswer ? 'answer-selected' : ''" ng-repeat="answerItem in question.answers" ng-click="selectAnswer(index, $index)">{{answerItem.text}}</p>
 				</div>
+        <p class="text-center answer-info answer-info-correct" ng-show="answerStatus === 1"><span class="icon icon-checkmark"></span> Correcto</p>
+        <p class="text-center answer-info answer-info-incorrect" ng-show="answerStatus === 0"><span class="icon icon-checkmark"></span> Incorrecto</p>
 			</div>
 		</div>
 	</div>

@@ -1,16 +1,21 @@
 'use strict';
 
 angular.module('buentratoApp')
-  .controller('TriviaItemCtrl', function ($scope, Data, $routeParams, $timeout) {
+  .controller('TriviaItemCtrl', function ($scope, Data, $routeParams, $timeout, $location) {
+    // Params
+    var id      = $routeParams.id,
+        slug    = $routeParams.slug;
+
     // Page setup
     $scope.pageClass = 'page-trivia-item';
     $scope.$parent.showNav = true;
     $scope.$parent.hasBackBtn = true;
-    $scope.$parent.pageTitle = 'Trivia Nivel ' + $routeParams.id;
+    $scope.$parent.pageTitle = 'Nivel ' + id;
     $scope.$parent.backPage = 'trivia';
     
-    $scope.trivia = Data.getTrivia($routeParams.id);
+    $scope.trivia = Data.getTrivia(id);
     $scope.index = 0;
+    $scope.answerStatus = null;
     $scope.$questionContainer = $('.question-container');
     $scope.$watch('index', function (newVal) {
         if ( 'number' === typeof newVal ) {
@@ -24,6 +29,7 @@ angular.module('buentratoApp')
                 left: -100
             }, function () {
                 $scope.index += 1;
+                $scope.answerStatus = null;
                 $scope.$apply();
                 $scope.$questionContainer.css({
                     left: 100
@@ -32,12 +38,23 @@ angular.module('buentratoApp')
                     left: 0
                 });
             });
+        } else {
+            $location.path( '/trivia/' + id + '/' + slug + '/' + 'end-level' );
         }
+    };
+    $scope.verifyAnswer = function(){
+
     };
     $scope.selectAnswer = function(questionIndex, answerIndex) {
     	$scope.question.selectedAnswer = answerIndex;
-        $timeout( function(){ 
-            $scope.next();
-        }, 100);
+        // Verify correct
+        if ( $scope.question.correctAnswer === answerIndex ) {
+            $scope.answerStatus = 1;
+            $timeout( function(){ 
+                $scope.next();
+            }, 200);
+        } else {
+            $scope.answerStatus = 0;
+        }
     };
   });
