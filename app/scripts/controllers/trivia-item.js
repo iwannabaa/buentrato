@@ -49,11 +49,14 @@ angular.module('buentratoApp')
     	$scope.question.selectedAnswer = answerIndex;
         // Verify correct
         if ( $scope.question.correctAnswer === answerIndex ) {
+            // Correct
             $scope.answerStatus = 1;
+            // Next question
             $timeout( function(){ 
                 $scope.next();
-            }, 200);
+            }, 300);
         } else {
+            // Wrong answer
             $scope.answerStatus = 0;
         }
     };

@@ -157,23 +157,23 @@ angular.module('buentratoApp')
                             {text: 'A la participación'},
                             {text: 'A participar en una guerra'}
                         ],
-                        correctAnswer: 1
+                        correctAnswer: 4
                     },
                     {
                         index: 2,
-                        question: '¿Cuantos derechos hay en la convención?',
+                        question: '¿Cuantos derechos hay en la Convención sobre los Derechos del Niño?',
                         answers: [
                             {text: '20'},
                             {text: '30'},
                             {text: '40'},
-                            {text: '50'},
+                            {text: '54'},
                             {text: '60'}
                         ],
-                        correctAnswer: 1
+                        correctAnswer: 3
                     },
                     {
                         index: 3,
-                        question: '¿En que año fue creada la convención?',
+                        question: '¿En que año fue aprobada la Convención sobre los Derechos del Niño?',
                         answers: [
                             {text: '1983'},
                             {text: '1989'},
@@ -185,7 +185,7 @@ angular.module('buentratoApp')
                     },
                     {
                         index: 4,
-                        question: '¿Que países no aprobaron la convención de los derechos del niño?',
+                        question: '¿Que país no aprobó la convención de los derechos del niño?',
                         answers: [
                             {text: 'Cuba'},
                             {text: 'EEUU'},
@@ -194,13 +194,24 @@ angular.module('buentratoApp')
                             {text: 'Alemania'}
                         ],
                         correctAnswer: 1
+                    },
+                    {
+                        index: 5,
+                        question: 'Según la Convención sobre los Derechos del Niño, un niño es:',
+                        answers: [
+                            {text: 'Toda persona menor de 18 años de edad'},
+                            {text: 'Toda persona menor de 13 años de edad'},
+                            {text: 'Toda persona menor de 12 años de edad'},
+                            {text: 'Toda persona menor de 21 años de edad'}
+                        ],
+                        correctAnswer: 0
                     }
                 ]
             },
             {
                 level: 2,
-                title: 'De la violencia al maltrato',
-                slug: 'de-la-violencia-al-maltrato',
+                title: 'De la violencia al buentrato',
+                slug: 'de-la-violencia-al-buentrato',
                 questions : [
                     {
                         index: 1,
@@ -212,7 +223,7 @@ angular.module('buentratoApp')
                             {text: 'Escuchar con atención'},
                             {text: 'Aceptar todo lo que el otro quiera'}
                         ],
-                        correctAnswer: 1
+                        correctAnswer: 3
                     },
                     {
                         index: 2,
@@ -233,7 +244,7 @@ angular.module('buentratoApp')
                             {text: 'Capacidad de no enojarse'},
                             {text: 'Capacidad de resistir y reconstruir'},
                             {text: 'Capacidad de dormir bien'},
-                            {text: 'Capacidad de tratar bien'},
+                            {text: 'Capacidad de maltratarse'},
                             {text: 'Capacidad de hacer lo correcto'}
                         ],
                         correctAnswer: 1
@@ -243,9 +254,9 @@ angular.module('buentratoApp')
                         question: '¿Cual es el tipo de violencia más frecuente hacia los niños y niñas?',
                         answers: [
                             {text: 'Castigo físico'},
-                            {text: 'Psicológica'},
+                            {text: 'Violencia psicológica'},
                             {text: 'Abuso sexual.'},
-                            {text: 'Patrimonial'},
+                            {text: 'Trabajo infantil'},
                             {text: 'Explotación sexual'}
                         ],
                         correctAnswer: 1
@@ -265,9 +276,9 @@ angular.module('buentratoApp')
                             {text: 'Una perdida de tiempo'},
                             {text: 'Un derecho para todos y todas'},
                             {text: 'Algo que no afecta la realidad'},
-                            {text: 'Siempre dirigida por adultos'}
+                            {text: 'Actividad siempre dirigida por adultos'}
                         ],
-                        correctAnswer: 1
+                        correctAnswer: 2
                     },
                     {
                         index: 2,
@@ -291,7 +302,7 @@ angular.module('buentratoApp')
                             {text: '2009'},
                             {text: '2011'}
                         ],
-                        correctAnswer: 1
+                        correctAnswer: 4
                     },
                     {
                         index: 4,
@@ -303,7 +314,19 @@ angular.module('buentratoApp')
                             {text: '111'},
                             {text: '123'}
                         ],
-                        correctAnswer: 1
+                        correctAnswer: 2
+                    },
+                    {
+                        index: 5,
+                        question: '¿Qué organización internacional trabaja con refugiados?',
+                        answers: [
+                            {text: 'FIFA'},
+                            {text: 'UNICEF'},
+                            {text: 'ACNUR'},
+                            {text: 'Gran Refugio'},
+                            {text: 'UYAMAS'}
+                        ],
+                        correctAnswer: 2
                     }
                 ]
             },
@@ -322,10 +345,34 @@ angular.module('buentratoApp')
                             {text: 'Juan Pablo II'},
                             {text: 'Eduardo Galeano'}
                         ],
-                        correctAnswer: 1
+                        correctAnswer: 2
                     },
                     {
                         index: 2,
+                        question: '"Traten a los demás como quisieran ustedes ser tratados"',
+                        answers: [
+                            {text: 'Mario Benedetti'},
+                            {text: 'Bob Marley'},
+                            {text: 'Jesús'},
+                            {text: 'Ronaldinho'},
+                            {text: 'Jean Paul Sartre'}
+                        ],
+                        correctAnswer: 2
+                    },
+                    {
+                        index: 3,
+                        question: '"Hay quienes miran la realidad y se preguntan ¿Por qué?. Y hay quienes la imaginan como jamás ha sido, y se preguntan ¿Por qué no?"',
+                        answers: [
+                            {text: 'Rabindranath Tagore'},
+                            {text: 'Diego Forlán'},
+                            {text: 'Isaac Asimov'},
+                            {text: 'George Bernard Shaw'},
+                            {text: 'John Lennon'}
+                        ],
+                        correctAnswer: 3
+                    },
+                    {
+                        index: 4,
                         question: '"No me preocupa tanto la maldad de los malos, sino la pasividad de los supuestamente buenos"',
                         answers: [
                             {text: 'Martin Luter King'},
@@ -334,10 +381,10 @@ angular.module('buentratoApp')
                             {text: 'Madre Teresa'},
                             {text: 'Barak Obama'}
                         ],
-                        correctAnswer: 1
+                        correctAnswer: 0
                     },
                     {
-                        index: 3,
+                        index: 5,
                         question: '"Para promover la paz mundial, vete a casa y ama a tu familia"',
                         answers: [
                             {text: 'Rigoberta Menchu'},
@@ -346,7 +393,7 @@ angular.module('buentratoApp')
                             {text: 'Madre Teresa'},
                             {text: 'Adolfo Perez Esquivel'}
                         ],
-                        correctAnswer: 1
+                        correctAnswer: 3
                     }
                 ]
             },
@@ -365,7 +412,7 @@ angular.module('buentratoApp')
                             {text: '15 años'},
                             {text: '18 años'}
                         ],
-                        correctAnswer: 1
+                        correctAnswer: 0
                     },
                     {
                         index: 2,
@@ -377,7 +424,7 @@ angular.module('buentratoApp')
                             {text: 'Presentarte '},
                             {text: 'Actuar naturalidad y respeto'}
                         ],
-                        correctAnswer: 1
+                        correctAnswer: 2
                     },
                     {
                         index: 3,
@@ -386,10 +433,33 @@ angular.module('buentratoApp')
                             {text: 'Que los hombres y las mujeres sean iguales'},
                             {text: 'Solo beneficia a las mujeres'},
                             {text: 'La dominación de las mujeres sobre los hombres'},
-                            {text: 'Busca contra restar las desigualdades entre varones y mujeres'},
-                            {text: 'No le interesa a los hombres'}
+                            {text: 'Buscar contrarrestar las desigualdades entre varones y mujeres'},
+                            {text: 'Algo que no les interesa a los hombres'}
                         ],
-                        correctAnswer: 1
+                        correctAnswer: 3
+                    },
+                    {
+                        index: 4,
+                        question: 'La explotación sexual infantil no es:',
+                        answers: [
+                            {text: 'Un delito grave sancionado por diversas leyes'},
+                            {text: 'Una violación grave de los derechos de los niños, niñas y adolescentes'},
+                            {text: 'Responsabilidad de los niños, niñas y adolescentes'},
+                            {text: 'la utilización de menores en actos sexuales para la satisfacción de los intereses y deseos de una persona, a cambio de un pago, promesa de pago o cualquier otro tipo de beneficios.'}
+                        ],
+                        correctAnswer: 3
+                    },
+                    {
+                        index: 5,
+                        question: 'Señala la clave que no ayuda a comunicarse con buentrato:',
+                        answers: [
+                            {text: 'Tener paciencia'},
+                            {text: 'Demostrar que queremos escuchar'},
+                            {text: 'Entender'},
+                            {text: 'No dejar hablar'},
+                            {text: 'Controlarse'}
+                        ],
+                        correctAnswer: 3
                     }
                 ]
             }
