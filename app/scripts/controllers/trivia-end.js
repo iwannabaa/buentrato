@@ -17,10 +17,14 @@ angular.module('buentratoApp')
     $scope.trivia = Data.getTrivia();
     $scope.currentLevel = id;
     $scope.nextTrivia = $scope.trivia[id]; // 0-based index so I use id instead of nextId
+    $scope.btnMessage = $scope.currentLevel < $scope.trivia.length ? 'Siguiente Nivel' : 'Volver al Menú';
 
     $scope.nextLevel = function() {
       if ( id < $scope.trivia.length ) {
         $location.path( '/trivia/' + nextId + '/' + $scope.nextTrivia.slug + '/' );
+      } 
+      else {
+        $location.path( '/menu/');
       }
     };
 });

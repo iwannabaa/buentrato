@@ -7,6 +7,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "animations";
 
 $primary-color-light: #27A8E0;
+$primary-color-dark : darken($primary-color-light, 10%);
 $highlight-color: #FFCC00;
 
 /*---------------------------------------------*/
@@ -237,6 +238,36 @@ body {
   }
 }
 
+.share-app {
+  font-weight: 600;
+  position: relative;
+  color: $primary-color-dark;
+  border-radius: 50px;
+  padding-top: 12px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  border: 2px solid $primary-color-dark;
+  background: transparent;
+  font-family: 'proxima-nova';
+  padding-bottom: 12px;
+  transition: all .2s linear;
+
+  .icon-share {
+    top: 7px;
+    font-size: 25px;
+    position: absolute;
+    left: 38px;
+  }
+
+  &:hover {
+    background-color: $primary-color-dark;
+    color: #fff;
+  }
+
+}
+
 /*---------------------------------------------*/
 /*  SPEAK UP PAGE
 /*---------------------------------------------*/
@@ -356,7 +387,7 @@ body {
 }
 
 .trivia-card-level-5 {
-  background-image: url(./../images/kid-01.png);
+  background-image: url(./../images/kid-05.png);
 }
 
 /*---------------------------------------------*/
