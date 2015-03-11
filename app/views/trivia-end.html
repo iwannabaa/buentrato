@@ -5,6 +5,17 @@
         <div class="question-container">
           <h2 class="text-center">¡Felicidades!</h2>
           <h3 class="text-center">Nivel Completado</h3>
+          <div class="text-center">
+            <img ng-src="images/award-{{currentLevel}}.png" alt="Medalla" width="300" height="300">
+          </div>
+          <div class="row action-btns-wrapper">
+            <div class="col-xs-3 share-wrapper">
+              <button class="action-btn share-btn"><span class="icon icon-share"></span></button>
+            </div>
+            <div class="col-xs-9 next-level-wrapper">
+              <button ng-click="nextLevel()" class="next-level action-btn">Siguiente Nivel</button>
+            </div>
+          </div>
       </div>
     </div>
   </div>
