@@ -8,7 +8,7 @@
  * Controller of the menu page
  */
 angular.module('buentratoApp')
-  .controller('MenuCtrl', function ($rootScope, $scope, Data) {
+  .controller('MenuCtrl', function ($rootScope, $scope, Data, $facebook) {
   	// Page setup
     $scope.pageClass = 'page-menu';
     $scope.$parent.showNav = true;
@@ -16,4 +16,12 @@ angular.module('buentratoApp')
     $scope.$parent.pageTitle = '¡Bienvenido!';
     // User info
     $scope.user = Data.getUser();
+    $scope.shareApp = function(){
+                        $facebook.ui({
+                          method: 'share',
+                          href: 'http://iwannabaa.github.io/buentrato/'
+                        }).then(function(){
+                          console.log('Returned');
+                        });
+                      };
   });
