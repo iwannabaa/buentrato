@@ -445,9 +445,9 @@ angular.module('buentratoApp')
                             {text: 'Un delito grave sancionado por diversas leyes'},
                             {text: 'Una violación grave de los derechos de los niños, niñas y adolescentes'},
                             {text: 'Responsabilidad de los niños, niñas y adolescentes'},
-                            {text: 'la utilización de menores en actos sexuales para la satisfacción de los intereses y deseos de una persona, a cambio de un pago, promesa de pago o cualquier otro tipo de beneficios.'}
+                            {text: 'La utilización de menores en actos sexuales para la satisfacción de los intereses y deseos de una persona, a cambio de un pago, promesa de pago o cualquier otro tipo de beneficios.'}
                         ],
-                        correctAnswer: 3
+                        correctAnswer: 2
                     },
                     {
                         index: 5,
