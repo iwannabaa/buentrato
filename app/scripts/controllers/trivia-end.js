@@ -10,9 +10,9 @@ angular.module('buentratoApp')
   	// Page setup
     $scope.pageClass = 'page-trivia';
     $scope.$parent.showNav = true;
-    $scope.$parent.hasBackBtn = false;
+    $scope.$parent.hasBackBtn = true;
     $scope.$parent.pageTitle = 'Nivel Completado';
-    $scope.$parent.backPage = 'menu';
+    $scope.$parent.backPage = 'trivia';
 
     $scope.trivia = Data.getTrivia();
     $scope.currentLevel = id;

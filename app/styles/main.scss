@@ -252,18 +252,12 @@ body {
   background: transparent;
   font-family: 'proxima-nova';
   padding-bottom: 12px;
-  transition: all .2s linear;
 
   .icon-share {
     top: 7px;
     font-size: 25px;
     position: absolute;
     left: 38px;
-  }
-
-  &:hover {
-    background-color: $primary-color-dark;
-    color: #fff;
   }
 
 }

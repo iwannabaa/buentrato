@@ -266,7 +266,7 @@ angular.module('buentratoApp')
             {
                 level: 3,
                 title: 'Activismo y participación',
-                slug: 'activismo-y-participación',
+                slug: 'activismo-y-participacion',
                 questions : [
                     {
                         index: 1,
