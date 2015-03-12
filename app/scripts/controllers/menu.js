@@ -21,7 +21,7 @@ angular.module('buentratoApp')
                           method: 'share',
                           href: 'http://iwannabaa.github.io/buentrato/'
                         }).then(function(){
-                          console.log('Returned');
+                          // After share
                         });
                       };
   });

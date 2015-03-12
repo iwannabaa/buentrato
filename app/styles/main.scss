@@ -465,7 +465,8 @@ body {
   }
 }
 
-#trivia-end-page {
+#trivia-end-page,
+#share-badge-page {
 
   .action-btns-wrapper {
     margin-top: 20px;
@@ -491,6 +492,12 @@ body {
     .share-btn {
       font-size: 16px;
       padding-top: 8px;
+    }
+
+    .goto-app-link {
+      display: block;
+      text-decoration: none;
+      text-align: center;
     }
   }
 }

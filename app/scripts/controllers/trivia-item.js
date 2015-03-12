@@ -26,7 +26,7 @@ angular.module('buentratoApp')
             $('.question-container').animate({
                 opacity: 0,
                 left: -100
-            },400 , function () {
+            }, function () {
                 $scope.$apply(function(){
                     $scope.index += 1;
                     $scope.answerStatus = null;
@@ -36,7 +36,6 @@ angular.module('buentratoApp')
                 }).animate({
                     opacity: 1,
                     left: 0
-                }, 400, function(){
                 });
             });
         } else {

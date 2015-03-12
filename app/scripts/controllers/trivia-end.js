@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('buentratoApp')
-  .controller('TriviaEndCtrl', function ($scope, $routeParams, $location, Data) {
+  .controller('TriviaEndCtrl', function ($scope, $routeParams, $location, Data, $facebook) {
 
     // Params
     var id      = $routeParams.id,
@@ -27,4 +27,12 @@ angular.module('buentratoApp')
         $location.path( '/menu/');
       }
     };
+    $scope.shareBadge = function() {
+                          $facebook.ui({
+                            method: 'share',
+                            href: 'http://iwannabaa.github.io/buentrato/share/level-0' + id
+                          }).then(function(){
+                            // After share
+                          });
+                        };
 });
