@@ -30,7 +30,7 @@ angular.module('buentratoApp')
     $scope.shareBadge = function() {
                           $facebook.ui({
                             method: 'share',
-                            href: 'http://iwannabaa.github.io/buentrato/share/level-0' + id
+                            href: 'http://iwannabaa.github.io/buentrato/badge/level-0' + id
                           }).then(function(){
                             // After share
                           });
