@@ -1,11 +1,12 @@
 <div id="trivia-page" class="page-wrapper">
   <div class="container">
-    <a href="#/trivia/{{triviaItem.level}}/{{triviaItem.slug}}" ng-click="transition('forward')" ng-repeat="triviaItem in triviaList">
+    <a class="trivia-card" ng-click="validateTrivia($index, '/trivia/{{triviaItem.level}}/{{triviaItem.slug}}')" ng-repeat="triviaItem in triviaList">
       <div class="row content-card trivia-level-card trivia-card-level-{{triviaItem.level}}">
         <div class="col-xs-8 col-xs-offset-4 trivia-level-title">
           <h4>{{triviaItem.title}}</h4>
         </div>
-        <p class="go-to-trivia-page">Nivel {{triviaItem.level}} &rarr;</p>
+        <p ng-show="triviaItem.isDone || $index === 0" class="trivia-btn go-to-trivia-page">Nivel {{triviaItem.level}} &rarr;</p>
+        <p ng-hide="triviaItem.isDone || $index === 0" class="trivia-btn">Completa el Nivel {{$index}}</p>
       </div>
     </a>
   </div>

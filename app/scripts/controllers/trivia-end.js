@@ -4,8 +4,9 @@ angular.module('buentratoApp')
   .controller('TriviaEndCtrl', function ($scope, $routeParams, $location, Data, $facebook) {
 
     // Params
-    var id      = $routeParams.id,
-        nextId  = parseInt(id) + 1;
+    var id          = $routeParams.id,
+        triviaIndex = parseInt(id) - 1,
+        nextId      = parseInt(id) + 1;
 
   	// Page setup
     $scope.pageClass = 'page-trivia';
@@ -27,12 +28,17 @@ angular.module('buentratoApp')
         $location.path( '/menu/');
       }
     };
+    $scope.markAsDone = function(triviaIndex) {
+      $scope.trivia[triviaIndex].isDone = true;
+    };
     $scope.shareBadge = function() {
-                          $facebook.ui({
-                            method: 'share',
-                            href: 'http://iwannabaa.github.io/buentrato/badge/level-0' + id
-                          }).then(function(){
-                            // After share
-                          });
-                        };
+      $facebook.ui({
+        method: 'share',
+        href: 'http://iwannabaa.github.io/buentrato/badge/level-0' + id
+      }).then(function(){
+        // After share
+      });
+    };
+
+    $scope.markAsDone(triviaIndex);
 });
