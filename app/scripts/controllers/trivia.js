@@ -11,14 +11,18 @@ angular.module('buentratoApp')
     
     $scope.triviaList = Data.getTrivia();
 
-    $scope.validateTrivia = function(index, goTo) {
-      var previousTrivia = index - 1;
-
-      if ( index === 0 || $scope.triviaList[previousTrivia].isDone ) {
+    $scope.goToTrivia = function(index, goTo) {
+      if ( index === 0 || $scope.checkPrevious(index) ) {
         $rootScope.transition('forward');
         $location.path(goTo);
-      } else {
-        return false;
       }
+    };
+
+    $scope.checkPrevious = function(index) {
+      var previousTrivia = index - 1;
+      if ( index === 0 || $scope.triviaList[previousTrivia].isDone ) { 
+        return true;
+      }
+      return false;
     };
   });
