@@ -33,6 +33,13 @@ angular
       }).when('/passport', {
         templateUrl: 'views/passport.html',
         controller: 'PassportCtrl'
+      }).when('/passport/create', {
+        templateUrl: 'views/passport-create.html',
+        controller: 'PassportCreateCtrl'
+      }).when('/passport/listen', {
+        templateUrl: 'views/passport-listen.html'
+      }).when('/passport/believe', {
+        templateUrl: 'views/passport-believe.html'
       })
       .when('/trivia', {
         templateUrl: 'views/trivia.html',
