@@ -512,6 +512,13 @@ body {
       text-align: center;
     }
   }
+  .passport-container {
+    margin-top: 20px;
+    
+    img{
+      max-width: 100%;
+    }
+  }
 }
 
 /*---------------------------------------------*/
@@ -574,11 +581,17 @@ body {
 .passport-protect {
   color: #8dc641;
 }
+.passport-include {
+  color: #b9529f;
+}
+.passport-speak {
+  color: #ec2028;
+}
 
 #passport-page {
 
   .intro-text {
-    margin-top: 40px;
+    margin-top: 20px;
 
     p {
       font-size: 18px;
@@ -591,12 +604,17 @@ body {
 
   .action-btns-wrapper {
     margin-top: 20px;
+    margin-bottom: 10px;
   }
 }
 
 #passport-create-page {
   background-color: #172e55;
   background-image: none;
+
+  .container {
+    background-color: #172e55;
+  }
 
   h2, h3 {
     text-transform: uppercase;
@@ -606,11 +624,11 @@ body {
   }
 
   h2 {
-    font-size: 34px;
+    font-size: 30px;
   }
 
   h3 {
-    font-size: 28px;
+    font-size: 24px;
   }
   .logo-container img {
     max-width: 100%;
@@ -618,5 +636,54 @@ body {
   
   .action-btns-wrapper {
     margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+#passport-share-page {
+  padding-top: 0;
+  background-color: #172e55;
+  background-image: none;
+  color: #f4b159;
+
+  .container {
+    background-color: #172e55;
+  }
+
+  .user-container {
+    margin-top: 10px;
+
+    img {
+      max-width: 100%;
+      border: 3px solid #fff;
+    }
+  }
+
+  h1, h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  small {
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 20px;
+  }
+
+  .action-btns-wrapper {
+    margin-top: 40px;
+  }
+
+  .share-wrapper {
+    padding-left: 0;
   }
 }

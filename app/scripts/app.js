@@ -40,6 +40,15 @@ angular
         templateUrl: 'views/passport-listen.html'
       }).when('/passport/believe', {
         templateUrl: 'views/passport-believe.html'
+      }).when('/passport/protect', {
+        templateUrl: 'views/passport-protect.html'
+      }).when('/passport/include', {
+        templateUrl: 'views/passport-include.html'
+      }).when('/passport/speak-up', {
+        templateUrl: 'views/passport-speak.html'
+      }).when('/passport/share', {
+        templateUrl: 'views/passport-share.html',
+        controller: 'PassportShareCtrl'
       })
       .when('/trivia', {
         templateUrl: 'views/trivia.html',
