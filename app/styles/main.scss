@@ -596,15 +596,27 @@ body {
     p {
       font-size: 18px;
       text-align: center;
+
+      @media  (min-width: 768px) {
+        margin-top: 40px;
+      }
     }
     strong {
       text-transform: uppercase;
+    }
+
+    @media  (min-width: 768px) {
+      margin-top: 40px;
     }
   }
 
   .action-btns-wrapper {
     margin-top: 20px;
     margin-bottom: 10px;
+
+    @media  (min-width: 768px) {
+      margin-top: 40px;
+    }
   }
 }
 
