@@ -343,6 +343,11 @@ body {
   background-position: 5px 5px;
   min-height: 120px;
   position: relative;
+  border-right: 10px solid #333;
+
+  @media (min-width: 768px) {
+    min-height: 150px;
+  }
 
   .trivia-level-title {
     padding-right: 0;
@@ -353,28 +358,37 @@ body {
       font-weight: bold;
       font-size: 14px;
       text-transform: uppercase;
+
+      @media (min-width: 768px) {
+        font-size: 21px;
+      }
     }
   }
 }
 
 .trivia-card-level-1 {
   background-image: url(./../images/kid-01.png);
+  border-right-color: #3954a5;
 }
 
 .trivia-card-level-2 {
   background-image: url(./../images/kid-02.png);
+  border-right-color: #f79422;
 }
 
 .trivia-card-level-3 {
   background-image: url(./../images/kid-03.png);
+  border-right-color: #8dc641;
 }
 
 .trivia-card-level-4 {
   background-image: url(./../images/kid-04.png);
+  border-right-color: #b9529f;
 }
 
 .trivia-card-level-5 {
   background-image: url(./../images/kid-05.png);
+  border-right-color: #ec2028;
 }
 
 /*---------------------------------------------*/
@@ -393,6 +407,10 @@ body {
     border-radius: 50px;
     border-bottom: 2px solid darken(#5d5d5d, 10%);
     background-color: #5d5d5d;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
   }
 
   .go-to-trivia-page {
@@ -409,6 +427,27 @@ body {
   .trivia-question-card {
     margin-top: 15px;
     margin-bottom: 30px;
+    border-bottom: 3px solid;
+
+    @media (min-width: 768px) {
+      border-bottom-width: 7px;
+    }    
+  }
+
+  .trivia-question-card-1 {
+    border-bottom-color: #3954a5;
+  }
+  .trivia-question-card-2 {
+    border-bottom-color: #f79422;
+  }
+  .trivia-question-card-3 {
+    border-bottom-color: #8dc641;
+  }
+  .trivia-question-card-4 {
+    border-bottom-color: #b9529f;
+  }
+  .trivia-question-card-5 {
+    border-bottom-color: #ec2028;
   }
 
   .question-content {
@@ -596,15 +635,27 @@ body {
     p {
       font-size: 18px;
       text-align: center;
+
+      @media  (min-width: 768px) {
+        margin-top: 40px;
+      }
     }
     strong {
       text-transform: uppercase;
+    }
+
+    @media  (min-width: 768px) {
+      margin-top: 40px;
     }
   }
 
   .action-btns-wrapper {
     margin-top: 20px;
     margin-bottom: 10px;
+
+    @media  (min-width: 768px) {
+      margin-top: 40px;
+    }
   }
 }
 
