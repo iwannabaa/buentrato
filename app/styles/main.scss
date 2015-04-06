@@ -427,27 +427,38 @@ body {
   .trivia-question-card {
     margin-top: 15px;
     margin-bottom: 30px;
-    border-bottom: 3px solid;
+    border-bottom: 5px solid;
+    border-radius: 5px;
+    
+    h2 {
+      color: #fff;
+      font-weight: normal;
+    }
 
     @media (min-width: 768px) {
-      border-bottom-width: 7px;
+      border-bottom-width: 10px;
     }    
   }
 
   .trivia-question-card-1 {
-    border-bottom-color: #3954a5;
+    background-color: #3954a5;
+    border-bottom-color: darken(#3954a5,10%);
   }
   .trivia-question-card-2 {
-    border-bottom-color: #f79422;
+    background-color: #f79422;
+    border-bottom-color: darken(#f79422,10%);
   }
   .trivia-question-card-3 {
-    border-bottom-color: #8dc641;
+    background-color: #8dc641;
+    border-bottom-color: darken(#8dc641,10%);
   }
   .trivia-question-card-4 {
-    border-bottom-color: #b9529f;
+    background-color: #b9529f;
+    border-bottom-color: darken(#b9529f,10%);
   }
   .trivia-question-card-5 {
-    border-bottom-color: #ec2028;
+    background-color: #ec2028;
+    border-bottom-color: darken(#ec2028,10%);
   }
 
   .question-content {
