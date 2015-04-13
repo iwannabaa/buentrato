@@ -302,7 +302,7 @@ angular.module('buentratoApp')
                             {text: '2009'},
                             {text: '2011'}
                         ],
-                        correctAnswer: 4
+                        correctAnswer: 1
                     },
                     {
                         index: 4,
