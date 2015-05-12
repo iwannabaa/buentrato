@@ -18,9 +18,9 @@ angular
   ])
   .config(function ($routeProvider, $facebookProvider) {
 
-    $facebookProvider.setAppId('1552541561701563');
+    $facebookProvider.setAppId('385932831615274');
     // $facebookProvider.setPermissions('user_location');
-    $facebookProvider.setVersion('v2.2');
+    $facebookProvider.setVersion('v2.3');
 
     $routeProvider
       .when('/', {
