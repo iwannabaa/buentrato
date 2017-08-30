@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Uruguay, país del buentrato</title>
+    <base href="/"></base>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta property="fb:app_id" content="1552541561701563" />
@@ -12,6 +13,7 @@
     <meta property="og:locale" content="es_LA" />
     <meta property="og:description" content="Entra y aprende sobre el buentrato y la erradicación de la violencia hacia niños, niñas y adolescentes" />
     <meta property="og:image" content="http://iwannabaa.github.io/buentrato/images/content/logo-md.png">
+    <style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {display: none !important;}</style>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -31,11 +33,11 @@
     <nav class="navbar navbar-default navbar-fixed-top" ng-cloak ng-show="showNav">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a href="#/{{backPage}}" ng-click="transition('back')" class="navbar-brand" ng-show="hasBackBtn">&larr;</a>
-          <p class="navbar-text navbar-title text-center">{{pageTitle}}</p>
+          <a href="#!/{{backPage}}" ng-click="transition('back')" class="navbar-brand" ng-show="hasBackBtn">&larr;</a>
+          <p class="navbar-text navbar-title text-center" ng-cloak>{{pageTitle}}</p>
         </div>
       </div>
-    </nav>    
+    </nav>
     <div ng-view class="main-wrapper view-animate {{pageClass}}" ng-class=" isGoingBack ? 'go-back' : '' "></div>
 
     <!-- build:js(.) scripts/vendor.js -->

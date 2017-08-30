@@ -21,7 +21,7 @@ angular.module('buentratoApp')
 		};
 
 		$scope.getUser = function() {
-			
+
 			var endpoint = '/me?fields=id,name,picture.redirect(false).width(200).height(200).type(square)';
 
 			$facebook.api(endpoint).then( function(response) {
