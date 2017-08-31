@@ -16,11 +16,13 @@ angular
     'ngTouch',
     'ngFacebook'
   ])
-  .config(function ($routeProvider, $facebookProvider) {
+  .config(['$locationProvider', '$routeProvider', '$facebookProvider',
+    function ($locationProvider, $routeProvider, $facebookProvider) {
 
-    $facebookProvider.setAppId('385932831615274');
-    // $facebookProvider.setPermissions('user_location');
-    $facebookProvider.setVersion('v2.3');
+    $facebookProvider.setAppId('128804311091434');
+    $facebookProvider.setVersion('v2.10');
+
+    $locationProvider.hashPrefix('!');
 
     $routeProvider
       .when('/', {
@@ -69,7 +71,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  })
+  }])
   .run( function($rootScope, $location) {
     // Load the facebook SDK asynchronously
     (function(d, s, id){
@@ -93,6 +95,6 @@ angular
       if ( $rootScope.loggedUser && next.templateUrl === 'views/main.html' ) {
         // no logged user, not going to #login, we should redirect to #main
         $location.path( '/menu' );
-      }         
+      }
     });
   });

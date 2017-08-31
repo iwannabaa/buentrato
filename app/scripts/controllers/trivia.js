@@ -8,7 +8,7 @@ angular.module('buentratoApp')
     $scope.$parent.hasBackBtn = true;
     $scope.$parent.pageTitle = 'Trivia';
     $scope.$parent.backPage = 'menu';
-    
+
     $scope.triviaList = Data.getTrivia();
 
     $scope.goToTrivia = function(index, goTo) {
@@ -20,7 +20,7 @@ angular.module('buentratoApp')
 
     $scope.checkPrevious = function(index) {
       var previousTrivia = index - 1;
-      if ( index === 0 || $scope.triviaList[previousTrivia].isDone ) { 
+      if ( index === 0 || $scope.triviaList[previousTrivia].isDone ) {
         return true;
       }
       return false;
