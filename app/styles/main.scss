@@ -3,6 +3,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400,700");
 // Imports
 @import "animations";
 
@@ -52,7 +53,7 @@ $highlight-color: #FFCC00;
 
 body {
   height: 100%;
-  font-family: "franklin-gothic-urw", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   background-image: url(./../images/light-toast.png);
 }
 
@@ -190,7 +191,7 @@ body {
   box-shadow: 0 3px 1px rgba(185, 185, 185, 0.4);
   padding: 20px;
   margin-left: 0;
-  margin-right: 0;  
+  margin-right: 0;
 }
 
 .profile-card {
@@ -200,7 +201,7 @@ body {
   @media (min-width: 768px) {
     margin-top: 60px;
   }
-  
+
   .user-avatar-wrapper {
     padding-left: 0;
     padding-right: 0;
@@ -214,7 +215,7 @@ body {
       max-width: 100%;
     }
   }
-  
+
   .user-info-wrapper {
     padding-right: 0;
   }
@@ -279,7 +280,7 @@ body {
   }
   .country-meta-org {
     padding: 0;
-    
+
     .org-name {
       text-transform: uppercase;
       font-weight: 400;
@@ -424,7 +425,7 @@ body {
 
 .question-container {
   margin-bottom: 20px;
-  font-family: "Proxima Nova", "Montserrat";
+  font-family: "Montserrat", sans-serif;
   position: relative;
 
   .trivia-question-card {
@@ -432,7 +433,7 @@ body {
     margin-bottom: 30px;
     border-bottom: 5px solid;
     border-radius: 5px;
-    
+
     h2 {
       color: #fff;
       font-weight: normal;
@@ -440,7 +441,7 @@ body {
 
     @media (min-width: 768px) {
       border-bottom-width: 10px;
-    }    
+    }
   }
 
   .trivia-question-card-1 {
@@ -567,7 +568,7 @@ body {
   }
   .passport-container {
     margin-top: 20px;
-    
+
     img{
       max-width: 100%;
     }
@@ -596,7 +597,7 @@ body {
 }
 
 .passport-item {
-  
+
   h2 {
     text-align: center;
     font-size: 30px;
@@ -698,7 +699,7 @@ body {
   .logo-container img {
     max-width: 100%;
   }
-  
+
   .action-btns-wrapper {
     margin-top: 20px;
     margin-bottom: 10px;
